@@ -1,0 +1,91 @@
+POST http://localhost:8080/aoptest
+Content-Type: application/json
+
+{
+  "id": "1",
+  "name": "Arpit",
+  "age": 22
+}
+
+###
+
+POST http://localhost:8080/aoptest
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "Shivam",
+  "age": 24
+}
+
+###
+
+POST http://localhost:8080/aoptest
+Content-Type: application/json
+
+{
+  "id": "3",
+  "name": "Kansal",
+  "age": 23
+}
+
+###
+
+POST http://localhost:8080/aoptest
+Content-Type: application/json
+
+{
+  "id": "4",
+  "name": "Prabal",
+  "age": 24
+}
+
+###
+
+POST http://localhost:8080/aoptest
+Content-Type: application/json
+
+{
+  "id": "5",
+  "name": "Saharsh",
+  "age": 24
+}
+
+###
+
+POST http://localhost:8080/aoptest
+Content-Type: application/json
+
+{
+  "id": "6",
+  "name": "Sjfksj",
+  "age": 27
+}
+
+###
+
+GET http://localhost:8080/aoptest
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/aoptest
+Content-Type: application/json
+
+{
+  "id": "3",
+  "name": "Kansal",
+  "age": 24
+}
+
+###
+
+DELETE http://localhost:8080/aoptest/6
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/aoptest/1
+Content-Type: application/json
+
+###
