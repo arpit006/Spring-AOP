@@ -15,8 +15,11 @@ public class BaseRepository {
 
     private Map<String, Person> personMap;
 
+    private List<Person> persons;
+
     public BaseRepository() {
         this.personMap = new HashMap<>();
+        this.persons = new ArrayList<>();
     }
 
     public Person save(Person person) {
@@ -55,8 +58,13 @@ public class BaseRepository {
     }
 
     public List<Person> findAll() {
+        System.out.println("Inside Base Repository");
         return new ArrayList<>(personMap.values());
     }
 
 
+    public Person savePerson(Person person) {
+        persons.add(person);
+        return person;
+    }
 }

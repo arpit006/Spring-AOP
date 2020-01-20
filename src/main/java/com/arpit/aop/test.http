@@ -64,10 +64,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/aoptest
-Content-Type: application/json
 
-###
 
 PUT http://localhost:8080/aoptest
 Content-Type: application/json
@@ -85,7 +82,23 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/aoptest/1
+GET http://localhost:8080/aoptest/4
 Content-Type: application/json
+
+###
+
+GET http://localhost:8080/aoptest
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/aoptest/save
+Content-Type: application/json
+
+{
+  "id": "6",
+  "name": "Sjfksj",
+  "age": 27
+}
 
 ###

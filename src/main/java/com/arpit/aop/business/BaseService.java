@@ -51,6 +51,11 @@ public class BaseService {
     }
 
     public List<Person> findAll() {
+        System.out.println("Inside Base Service");
         return baseRepository.findAll();
+    }
+
+    public Person savePerson(Person person) {
+        return baseRepository.savePerson(person);
     }
 }

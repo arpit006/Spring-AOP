@@ -28,6 +28,11 @@ public class BaseController {
         return baseService.save(person);
     }
 
+    @PostMapping(value = "/save")
+    public Person savePerson(@RequestBody Person person) {
+        return baseService.savePerson(person);
+    }
+
     @GetMapping(value = "")
     public List<Person> findAll() {
         return baseService.findAll();
