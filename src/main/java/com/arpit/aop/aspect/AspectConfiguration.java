@@ -18,6 +18,10 @@ import java.util.Date;
 @Aspect
 public class AspectConfiguration {
 
+    /**
+     * We can perform all logical operations on Pointcuts and make them work. All the && || etc operators work
+     */
+
     @Before("savePointCut()")
     public void save(JoinPoint joinPoint) {
 //        System.out.println(joinPoint);
@@ -56,6 +60,9 @@ public class AspectConfiguration {
         System.out.println("Aspect :: AFTER UPDATE method + "+ joinPoint.getSignature() +" + called at " + new Date() );
     }
 
+    /**
+     * This method will create a PointCut (REGEX) which can be used for all the advices.
+     */
     @Pointcut("execution(* update(..))")
     public void updatePointCut() {}
 
@@ -89,6 +96,25 @@ public class AspectConfiguration {
 //        joinPoint.getStaticPart().
         return null;
     }
+
+    /**
+     * For all the methods inside the class
+     */
+    @Before("within(com.arpit.aop.business.BaseRepository)")
+    public void withinRepoClass(JoinPoint joinPoint) {
+        System.out.println("Aspect :: WITHIN BaseRepository methods + " + joinPoint.getSignature() + " called at " + new Date());
+    }
+
+    /**
+     * To advice all the methods taking Person as argument
+     */
+    /*@Pointcut("args(com.arpit.aop.business.Person)")
+    public void argsPointCut() {}
+
+    @Before("argsPointCut()")
+    public void argsAdvice(JoinPoint joinPoint) {
+        System.out.println("Aspect :: ARGS " + joinPoint.getSignature() + " called at " + new Date());
+    }*/
 
     //TODO Internet Proxy using AOP
 }
