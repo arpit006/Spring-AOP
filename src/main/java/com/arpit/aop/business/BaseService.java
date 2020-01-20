@@ -51,7 +51,6 @@ public class BaseService {
     }
 
     public List<Person> findAll() {
-        System.out.println("Inside Base Service");
         return baseRepository.findAll();
     }
 

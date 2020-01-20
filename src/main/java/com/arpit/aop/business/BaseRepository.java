@@ -58,8 +58,9 @@ public class BaseRepository {
     }
 
     public List<Person> findAll() {
-        System.out.println("Inside Base Repository");
-        return new ArrayList<>(personMap.values());
+        ArrayList<Person> people = new ArrayList<>(personMap.values());
+        System.out.println(people);
+        return people;
     }
 
 
