@@ -91,8 +91,8 @@ public class AspectConfiguration {
     }
 
     @Around("execution(* com.arpit.aop.business.BaseRepository.savePerson(..))")
-    public Object aroundSave(ProceedingJoinPoint joinPoint) {
-        System.out.println("Aspect :: AROUND SAVE method + " + joinPoint.getSignature() + " called at " + new Date());
+    public Object aroundSavePerson(ProceedingJoinPoint joinPoint) {
+        System.out.println("Aspect :: AROUND SAVE-PERSON method + " + joinPoint.getSignature() + " called at " + new Date());
         System.out.println("Target : " + joinPoint.getTarget());
         System.out.println("Static Part : " + joinPoint.getStaticPart());
         System.out.println(joinPoint.getStaticPart().getId() + joinPoint.getStaticPart().getKind() + joinPoint.getStaticPart().getSignature());
