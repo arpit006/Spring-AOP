@@ -100,7 +100,6 @@ public class AspectConfiguration {
         Arrays.stream(joinPoint.getArgs()).forEach(t -> System.out.println("Arguments : " + t));
         BaseRepository target = (BaseRepository) joinPoint.getTarget();
         Person person = target.savePerson(new Person("111", "110110011", 10));
-//        joinPoint.getStaticPart().
         try {
             joinPoint.proceed();
         } catch (Throwable throwable) {
